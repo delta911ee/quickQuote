@@ -1,0 +1,300 @@
+.main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+}
+
+.tools{
+    width: 60px;
+    height: 90vh;
+    background-color: var(--toolsColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tools > div{
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s ease-in-out;
+}
+
+.fillSolid{
+    background-size:40%;
+    background-image: url(assets/fillSolidWhite.svg);
+}
+
+.fillSolid:hover{
+    background-color: var(--hoverColorLight);
+}
+
+.fillGradient{
+    background-size: 40%;
+    background-image: url(assets/fillGradeintWhite.svg);
+}
+
+.fillGradient:hover{
+    background-color: var(--hoverColorLight);
+}
+
+.writeText{
+    background-size: 40%;
+    background-image: url(assets/textWhite.svg);
+}
+
+.writeText:hover{
+    background-color: var(--hoverColorLight);
+}
+
+.toolsMain{
+    width: 45vw;
+    height: 90vh;
+    background-color: var(--toolsMainColor);
+    display: flex;
+    flex-direction: column;
+}
+
+.t{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolName, .textAlign, .textColor, .fontPick, .textFormat, .customColor{
+    font-size: 1.5rem;
+}
+
+.outputSection{
+    flex-grow: 1;
+    height: 90vh;
+}
+
+.canvas{
+    width: calc(100vw - 45vw - 60px);
+    height: 80vh;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.downloadSection{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--toolsColor);
+}
+
+.downloadButton{
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.2rem;
+    background-color: var(--buttonColorLight);
+    transition: 0.2s ease-in-out;
+}
+
+.downloadButton:hover{
+    background-color: var(--hoverColorLight);
+    color: white;
+}
+
+.activeTool{
+    background-color: var(--hoverColorLight);
+}
+
+.solidColor, .gradientColor{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.solidColor:hover, .gradientColor:hover{
+    box-shadow: 0px 0px 20px 2.5px rgba(40, 40, 40, 0.458);
+}
+
+.utilityWrapper{
+    display: block;
+    position: relative;
+}
+
+.solidFillUtility{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+}
+
+.solidColors, .gradientColors{
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15%;
+    grid-template-rows: 25%;
+    justify-content: center;
+}
+
+.customSolidColorChooser{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.customSolidColor{
+    width: 75%;
+    height: 45px;
+    border: none;
+}
+
+.gradientFillUtility{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+}
+
+.textUtility{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+}
+
+.fontConfiguration, .colorPickerCont, .formatOptions{
+    width: calc(80% + 20px);
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input{
+    font-family: "Manrope", sans-serif;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    color: gray;
+}
+
+.input:focus{
+    outline: none;
+    color: black;
+}
+
+.quoteTextArea{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.fontFamily{
+    width: 70%;
+    height: 30px;
+}
+
+.fontSize{
+    width: 20%;
+    height: 30px;
+}
+
+.fontSize:invalid{
+    background-color: red;
+}
+
+.quoteText{
+    max-width: 100%;
+    max-height: 60vh;
+    word-wrap: break-word;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    padding-inline: 20px;
+    font-synthesis: style, weight;
+}
+
+.hidden{
+    z-index: -1;
+}
+
+.textAlignmentConfig{
+    flex-direction: column;
+}
+
+.alignmentButtons{
+    width: calc(80% + 20px);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: antiquewhite;
+}
+
+.alignmentButtons > .ab{
+    width: calc(100%/3);
+    height: 50px;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: var(--buttonColorLight);
+    transition: 0.2s ease-in-out;
+}
+
+.alignmentButtons > .ab:hover{
+    background-color: var(--hoverColorLight);
+    color: white;
+}
+
+.ab:nth-child(1){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.ab:nth-child(3){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.alignmentButtons > .activeAlignment{
+    color: white;
+    background-color: var(--hoverColorLight);
+}
+
+.colorPicker{
+    width: 20%;
+    height: 100%;
+    border: none;
+}
+
+.hexCode{
+    width: 60%;
+    height: 30px;
+}
+
+.format{
+    font-size: 1.2rem;
+}
+
+.chk{
+    width: 30px;
+    height: 100%;
+}

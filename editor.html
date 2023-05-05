@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickQuote - Editor</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">QuickQuote</h1>
+        <div class="links">
+            <a href="home.html" class="inactive">Home</a>
+            <a href="editor.html" class="active">Editor</a>
+            <a href="support.html" class="inactive">Support</a>
+        </div>
+        <button class="darkMode"><img src="assets/moon.svg"></button>
+    </header>
+    <div class="main">
+        <div class="tools">
+            <div class="fillSolid tool activeTool"></div>
+            <div class="fillGradient tool"></div>
+            <div class="writeText tool"></div>
+        </div>
+        <div class="toolsMain">
+            <div class="toolNameCont t">
+                <p class="toolName">Choose a solid color</p>
+            </div>
+            <div class="utilityWrapper">
+                <div class="solidFillUtility">
+                    <div class="solidColors"></div>
+                    <div class="customSolidColorChooser">
+                        <div class="t customColor">Don't like these? Choose your own</div>
+                        <input type="color" class="customSolidColor">
+                    </div>
+                </div>
+                <div class="gradientFillUtility hidden">
+                    <div class="gradientColors"></div>
+                </div>
+                <div class="textUtility hidden">
+                    <input type="text" id="quoteTextArea" class="quoteTextArea input" placeholder="Write your quote here.." value="Talk is cheap, Show me the code.">
+                    <div class="fontConfigCont t">
+                        <p class="fontPick">Font settings</p>
+                    </div>
+                    <div class="fontConfiguration">
+                        <input type="text" class="fontFamily input" placeholder="Any system font.." value="Manrope">
+                        <input type="number" class="fontSize input" placeholder="Font size.." value="24" pattern="^[0-9]*$" required>
+                    </div>
+                    <div class="Textcolor t">
+                        <p class="textColor">Text color</p>
+                    </div>
+                    <div class="colorPickerCont">
+                        <input type="text" class="hexCode input" placeholder="Enter color name / HEX / RGB / HSL">
+                        <p>Or pick</p>
+                        <input type="color" class="colorPicker">
+                    </div>
+                    <div class="textStylings t">
+                        <p class="textFormat">Text formatting</p>
+                    </div>
+                    <div class="formatOptions">
+                        <p class="format">Bold</p>
+                        <input type="checkbox" class="boldText chk">
+                        <p class="format">Italicize</p>
+                        <input type="checkbox" class="italicizeText chk">
+                        <p class="format">Underline</p>
+                        <input type="checkbox" class="underlineText chk">
+                    </div>
+                    <div class="textAlignmentConfig t">
+                        <p class="textAlign">Text alignment</p>
+                    </div>
+                    <div class="alignmentButtons">
+                        <button class="leftAlign ab">Left</button>
+                        <button class="centerAlign activeAlignment ab">Center</button>
+                        <button class="rightAlign ab">Right</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="outputSection">
+            <div class="canvas" id="canvas">
+                <p class="quoteText" id="quoteText"></p>
+            </div>
+            <div class="downloadSection">
+                <button class="downloadButton">Download</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="html2canvas.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
